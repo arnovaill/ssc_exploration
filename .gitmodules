@@ -1,0 +1,3 @@
+[submodule "SSC"]
+	path = SSC
+	url = https://github.com/waterljwant/SSC
