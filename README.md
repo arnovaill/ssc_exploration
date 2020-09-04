@@ -1,13 +1,14 @@
 # ssc_exploration
 
-**ssc_exploration** aims at augmenting robotic exploration thanks to the use of semantic scene completion. We provide here a ROS package with a ssc node, predicting scene occupancy from the current point of view. This package integrate itself into a exploration pipeline developped in collaboration with the autonomous systems lab of ETHZ:https://github.com/ethz-asl/mav_active_3d_planning.git. The semantic scene completion itself is based on this repository: https://github.com/waterljwant/SSC. 
+**ssc_exploration** aims at augmenting robotic exploration thanks to the use of semantic scene completion. We provide here a ROS package with a ssc node, predicting scene occupancy from the current point of view. This package integrate itself into a exploration pipeline developped in collaboration with the autonomous systems lab of ETHZ:https://github.com/ethz-asl/mav_active_3d_planning.git. The semantic scene completion itself is based on [this repository](https://github.com/waterljwant/SSC). 
 
-In order to integrate the predictions of SSC to the SSC pipeline, modifications to FIESTA, unreal_cv_ros and mav_active_3d_planning were necessary:
+In order to integrate the predictions of SSC to the SSC pipeline, modifications to FIESTA, unreal_cv_ros and mav_active_3d_planning were necessary. The modified versions are available here:
 https://github.com/arnovaill/mav_active_3d_planning
 https://github.com/arnovaill/unreal_cv_ros
 https://github.com/arnovaill/FIESTA
 
 ## Architecture
+For more information about the overall system, please refer to this [report]() or ask 
 
 ![image info](./images/general_architecture.png)
 
@@ -15,7 +16,7 @@ https://github.com/arnovaill/FIESTA
 It is strongly recommended to use a conda environment to use this repository. The environment used to compile and run the code is provided [here](environment.yml).
 
 ## Setup
-First, setup a catkin workspace using the modified version of mav_active_3d_planning based on FIESTA, following the instructions here: https://github.com/arnovaill/mav_active_3d_planning. 
+First, setup a catkin workspace using the modified version of mav_active_3d_planning based on FIESTA, following the instructions [here](https://github.com/arnovaill/mav_active_3d_planning). This should install the forked versions of mav_active_3d_planning, FIESTA, unreal_cv_ros and their dependencies. 
 
 The semantic scene completion is based on Python 3. As ROS melodic only supports Python 2.7, a separate catkin workspace based on Python 3.6 needs to be built using the following instruction: 
 
@@ -41,12 +42,12 @@ Before any experiment, the field of view must be set corresponding to the field 
 
 
 ## Run an Experiment
-In the exploration workspace, run: 
+In the exploration workspace (Python 2), run: 
 ```bat
 roslaunch active_3d_planning_app_reconstruction example_fiesta.launch
 ```
 
-In the SSC workspace, run: 
+In the SSC workspace (Python 3), run: 
 
 ```bat
 rosrun ssc ssc.py
