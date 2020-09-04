@@ -27,7 +27,6 @@ from scipy.spatial.transform import Rotation as R
 node_name = 'ssc'
 current_path = os.path.dirname(os.path.abspath(__file__))
 weight_file = current_path + '/../weights/cpBest_SSC_DDRNet3.pth.tar'
-print(weight_file)
 
 depth_image_topic = '/unreal/unreal_sensor_model/ue_depth_image_out'
 rgb_image_topic = '/unreal/unreal_sensor_model/ue_color_image_out'
