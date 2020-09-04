@@ -8,7 +8,7 @@ https://github.com/arnovaill/unreal_cv_ros
 https://github.com/arnovaill/FIESTA
 
 ## Architecture
-For more information about the overall system, please refer to this [report]() or ask 
+For more information about the overall system, please refer to this [report](https://drive.google.com/file/d/1kk7xICdF81Mh6jzDIhkDQVQhiU9dlYP_/view?usp=sharing).
 
 ![image info](./images/general_architecture.png)
 
