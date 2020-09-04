@@ -11,6 +11,9 @@ https://github.com/arnovaill/FIESTA
 
 ![image info](./images/general_architecture.png)
 
+## Dependencies
+It is strongly recommended to use a conda environment to use this repository. The environment used to compile and run the code is provided [here](environment.yml).
+
 ## Setup
 First, setup a catkin workspace using the modified version of mav_active_3d_planning based on FIESTA, following the instructions here: https://github.com/arnovaill/mav_active_3d_planning. 
 
@@ -34,7 +37,7 @@ catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE='/home/
 ```
 
 ## Configuration
-Before any experiment, the field of view must be set corresponding to the field of view of the SSC model. In the installation folder of UnrealEngine change the field of view in /UnrealEngine/Engine/Binaries/Linux/unrealcv.ini to 50.9678. 
+Before any experiment, the field of view must be set corresponding to the field of view of the SSC model. In the installation folder of UnrealEngine change the field of view in /UnrealEngine/Engine/Binaries/Linux/unrealcv.ini to **50.9678**. The starting height of the drone must be changed before use, it is currently hard-coded in the ssc.py file. 
 
 
 ## Run an Experiment
